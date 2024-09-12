@@ -8,7 +8,7 @@ public class Problem1 {
         String name;
         name = scan.next();
         int len = name.length();
-
+        scan.close();
         System.out.print("+");
         for (int i = 0; i < len; i++) {
             System.out.print("-");;
