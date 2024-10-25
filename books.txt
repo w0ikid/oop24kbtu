@@ -1,0 +1,3 @@
+The Great Gatsby,F. Scott Fitzgerald,10.99,Fiction
+Sapiens,Yuval Noah Harari,15.99,Non-fiction
+Harry Potter,J.K. Rowling,9.99,Children's Fiction
