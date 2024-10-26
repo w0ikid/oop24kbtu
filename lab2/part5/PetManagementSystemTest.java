@@ -242,9 +242,11 @@ public class PetManagementSystemTest {
     public static void main(String[] args) {
         Person danial = new Employee("Danial", 19, "jobless");
         Person nurik = new PhDStudent("Nurik", 18, "Comp. Science", "AI");
+        Person boshka = new Employee("boshka", 25, "CEO of Nvidia");
 
         Animal murka = new Cat("Murka", 5);
         Animal rex = new Dog("Rex", 3);
+        // Animal fish = new Fish("goldenbaby", 1);
 
         danial.assignPet(rex);
         nurik.assignPet(murka);
@@ -252,16 +254,21 @@ public class PetManagementSystemTest {
         PersonRegistry registry = new PersonRegistry();
         registry.addPerson(danial);
         registry.addPerson(nurik);
+        registry.addPerson(boshka);
+
+        System.out.println(registry);
+        
+        nurik.leavePetWith(boshka);
 
         System.out.println(registry);
 
-        danial.leavePetWith(nurik);
+        // danial.leavePetWith(nurik);
 
-        System.out.println(registry);
+        // System.out.println(registry);
 
-        danial.retrievePetFrom(nurik);
+        // danial.retrievePetFrom(nurik);
 
-        System.out.println(registry);
+        // System.out.println(registry);
     }
 }
 

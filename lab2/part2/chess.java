@@ -1,5 +1,7 @@
 package lab2.part2;
 
+import java.util.Objects;
+
 public class chess {
     public static void main(String[] args) {
         Piece pawn = new Pawn(new Position(1, 1));
@@ -49,7 +51,7 @@ class Position {
 
     @Override 
     public int hashCode() {
-        return 31 * x + y;
+        return Objects.hash(x, y);
     }
 }
 

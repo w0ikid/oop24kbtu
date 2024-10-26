@@ -63,7 +63,7 @@ class Sphere extends Shape3D {
 }
 
 class Cube extends Shape3D {
-    private double height;
+    protected double height;
 
     public Cube(double height){
         this.height = height;

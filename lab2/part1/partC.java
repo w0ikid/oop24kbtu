@@ -10,14 +10,20 @@ public class partC {
         Animal dog1 = new Dog("akita", 5, "123ABC");
         Animal dog2 = new Dog("akita", 5, "123ABC");
         Animal dog3 = new Dog("germen shepherd dog", 3, "456DEF");
+        Animal cat1 = new Cat("someothercat", 1, "123OOO");
+        Animal cat2 = new Cat("somecat", 1, "123OOO");
 
         animalSet.add(dog1);
         animalSet.add(dog2);
         animalSet.add(dog3);
+        animalSet.add(cat1);
+        animalSet.add(cat2);
 
         for (Animal a : animalSet) {
             System.out.println(a);
         }
+
+
 
         System.out.println("unique in HashSet: " + animalSet.size());
     }
@@ -41,11 +47,11 @@ class Animal {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
+    public boolean equals(Object obj){
+        if (this == obj){
             return true;
         }
-        if (obj == null || getClass() != obj.getClass()) {
+        if (obj == null || getClass() != obj.getClass()){
             return false;
         }
         Animal animal = (Animal) obj;
@@ -98,5 +104,50 @@ class Dog extends Animal {
     @Override
     public String toString() {
         return "Dog type= " + getType() + " age=" + getAge() + " chipId=" + chipId;
+    }
+}
+
+class Cat extends Animal {
+    private String chipId;
+
+    public Cat(String type, int age, String chipId) {
+        super(type, age);
+        this.chipId = chipId;
+    }
+
+    @Override
+    public int getAge() {
+        // TODO Auto-generated method stub
+        return super.getAge();
+    }
+
+    @Override
+    public String getType() {
+        return super.getType();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!super.equals(obj)) {
+            return false;
+        }
+        if (getClass() != obj.getClass()){
+            return false;
+        }
+        Cat cat = (Cat) obj;
+        return Objects.equals(chipId, cat.chipId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), chipId);
+    }
+
+    @Override
+    public String toString() {
+        return "Cat type= " + getType() + " age=" + getAge() + " chipId=" + chipId;
     }
 }

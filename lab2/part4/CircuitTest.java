@@ -82,8 +82,8 @@ class Parallel extends Circuit {
     @Override
     public double getResistance() {
         double r1 = circuit1.getResistance();
-        double r2 = circuit2.getResistance();
-        return 1 / (1 / r1 + 1 / r2);
+        double r2 = circuit1.getResistance();
+        return (1 / (1/r1) + (1/r2));
     }
 
     @Override
@@ -108,9 +108,10 @@ public class CircuitTest {
 
         Circuit f = new Series(a, b);
         Circuit g = new Parallel(c, d);
-        Circuit h = new Series(g, e);
+        Circuit h = new Series(g, e); // 4
+        // 1/6 + 1/3 = 1/1/2 = 2
         Circuit circuit = new Parallel(h, f);
-
+        // 1/4 + 1/6 = 
         double R = circuit.getResistance();
         System.out.println("Equivalent Resistance of the circuit: " + R + " Ohms");
 

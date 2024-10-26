@@ -167,23 +167,28 @@ class Bank {
 
 public class BankSystemTest {
     public static void main(String[] args) {
-        Bank bank = new Bank();
+        // Bank bank = new Bank();
 
-        SavingsAccount savingsAccount = new SavingsAccount(1001, 5.0);  // 5% interest
-        CheckingAccount checkingAccount = new CheckingAccount(1002);
+        // account checking account
+        
+        Account account = new Account(0);
+        CheckingAccount something = (CheckingAccount) account;
+        System.out.println((something));
+        // SavingsAccount savingsAccount = new SavingsAccount(1001, 5.0);  // 5% interest
+        // CheckingAccount checkingAccount = new CheckingAccount(1002);
 
-        bank.openAccount(savingsAccount);
-        bank.openAccount(checkingAccount);
+        // bank.openAccount(savingsAccount);
+        // bank.openAccount(checkingAccount);
 
-        savingsAccount.deposit(1000);
-        checkingAccount.deposit(500);
+        // savingsAccount.deposit(1000);
+        // checkingAccount.deposit(500);
 
-        checkingAccount.withdraw(50);
-        checkingAccount.deposit(200);
-        checkingAccount.withdraw(100);
+        // checkingAccount.withdraw(50);
+        // checkingAccount.deposit(200);
+        // checkingAccount.withdraw(100);
 
-        bank.updateAccounts();
+        // bank.updateAccounts();
 
-        bank.printAccounts();
+        // bank.printAccounts();
     }
 }
