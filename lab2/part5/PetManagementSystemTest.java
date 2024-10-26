@@ -63,13 +63,17 @@ abstract class Person {
 
     @Override
     public String toString() {
-        return name + " (" + getOccupation() + "), Age: " + age + ", Pet: " + (hasPet() ? pet : "No pet");
+        return name + " " + getOccupation() + " Age: " + age + ", Pet: " + (hasPet() ? pet : "No pet");
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
         Person person = (Person) obj;
         return age == person.age && name.equals(person.name);
     }
@@ -139,7 +143,7 @@ abstract class Animal {
 
     @Override
     public String toString() {
-        return name + " (" + getClass().getSimpleName() + "), Age: " + age + ", Sound: " + getSound();
+        return name + " " + getClass().getSimpleName() + " Age: " + age + " Sound: " + getSound();
     }
 }
 
