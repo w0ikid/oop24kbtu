@@ -1,4 +1,4 @@
-package lab3.part6;
+package six;
 
 import java.io.Serializable;
 import java.util.ArrayList;

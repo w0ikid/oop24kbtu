@@ -1,4 +1,4 @@
-package part1;
+package one;
 
 interface Payable {
     void payRetakeFee();

@@ -1,4 +1,4 @@
-package part4;
+package four;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -98,7 +98,7 @@ class Employee extends Person implements Comparable<Employee>, Cloneable {
     public Employee clone() {
         try {
             Employee clone = (Employee) super.clone();
-            clone.hireDate = (Date) hireDate.clone(); // Глубокое клонирование даты
+            clone.hireDate = (Date) hireDate.clone();
             return clone;
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
@@ -161,7 +161,7 @@ class Manager extends Employee {
     @Override
     public Manager clone() {
         Manager clone = (Manager) super.clone();
-        clone.team = (Vector<Employee>) team.clone(); // Глубокое клонирование команды
+        clone.team = (Vector<Employee>) team.clone();
         return clone;
     }
 }

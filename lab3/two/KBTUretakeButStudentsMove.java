@@ -1,4 +1,4 @@
-package part2;
+package two;
 
 // addition
 interface Moveable {

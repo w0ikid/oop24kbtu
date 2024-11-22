@@ -1,16 +1,14 @@
-package part5;
+package five;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // Тест с числами
         Integer[] numbers = {3, 6, 1, 5, 2, 4};
         System.out.println("Before sorting: " + Arrays.toString(numbers));
         Sort.quickSort(numbers);
         System.out.println("After sorting: " + Arrays.toString(numbers));
-
-        // Тест с шоколадом
+        // тест с ошколадом
         Chocolate[] chocolates = {
             new Chocolate("Mars", 50.0),
             new Chocolate("Snickers", 45.0),
