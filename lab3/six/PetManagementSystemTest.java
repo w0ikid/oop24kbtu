@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-// Пользовательские интерфейсы
 interface CanFeed {
     void feed(Animal pet);
 }
@@ -13,7 +12,6 @@ interface CanTrain {
     void train(Animal pet);
 }
 
-// Абстрактный класс Person
 abstract class Person implements Comparable<Person>, Serializable, CanFeed {
     protected String name;
     protected int age;
@@ -105,7 +103,6 @@ abstract class Person implements Comparable<Person>, Serializable, CanFeed {
     }
 }
 
-// Employee class
 class Employee extends Person implements CanTrain {
     private String jobTitle;
 
@@ -125,7 +122,6 @@ class Employee extends Person implements CanTrain {
     }
 }
 
-// Student class
 class Student extends Person {
     private String major;
 
@@ -140,7 +136,6 @@ class Student extends Person {
     }
 }
 
-// PhDStudent class
 class PhDStudent extends Person {
     private String researchArea;
 
@@ -155,7 +150,6 @@ class PhDStudent extends Person {
     }
 }
 
-// Abstract Animal class
 abstract class Animal implements Serializable {
     protected String name;
     protected int age;
