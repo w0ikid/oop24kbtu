@@ -204,5 +204,6 @@ public class Main {
         // Проверка клонирования
         Manager m2 = m1.clone();
         System.out.println("Cloned manager: " + m2);
+        System.out.println(m1.equals(m2));
     }
 }
