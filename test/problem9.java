@@ -31,11 +31,7 @@ class Student extends Person {
         super(name, age);
         this.retake = retake;
     }
-    /*
-     * some changes
-     * 
-     * some changes
-     */
+    // somechanges
 
     public String getRetake(){
         return retake;
